@@ -914,8 +914,7 @@ class Vite implements Htmlable
      */
     protected function assetPath($path, $secure = null)
     {
-        return $path; // success code
-        // return ($this->assetPathResolver ?? asset(...))($path, $secure ?? request()->secure()); // success code
+        return ($this->assetPathResolver ?? asset(...))($path, $secure ?? request()->header('X-Forwarded-Proto') == 'https'); // success code
         // return ($this->assetPathResolver ?? asset(...))($path, $secure); // old code X
     }
 
