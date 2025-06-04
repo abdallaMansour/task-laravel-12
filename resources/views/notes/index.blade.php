@@ -25,7 +25,7 @@
 
                     @forelse ($notes as $note)
                         {{-- Note Card --}}
-                        <div style="margin: 15px 0" class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 w-full sm:w-[calc(50%-0.5rem)] md:w-[calc(33.33%-0.67rem)] lg:w-[calc(25%-0.75rem)]">
+                        <div style="margin: 15px 0" class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 w-full">
                             <h3 class="text-lg font-bold mb-2">{{ $note->title }}</h3>
                             <p class="mb-4">{{ $note->content }}</p>
 
